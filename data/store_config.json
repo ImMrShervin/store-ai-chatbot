@@ -1,0 +1,130 @@
+{
+  "store": {
+    "name": "فروشگاه نمونه",
+    "name_en": "Sample Store",
+    "tagline": "بهترین کیفیت، مناسب‌ترین قیمت",
+    "tagline_en": "Best Quality, Best Price",
+    "description": "این یک فروشگاه نمونه است. لطفاً محتوای این فایل را با اطلاعات فروشگاه واقعی خود جایگزین کنید.",
+    "description_en": "This is a sample store. Please replace this content with your actual store information.",
+    "established_year": 1400,
+    "website": "https://example.com",
+    "logo_url": ""
+  },
+  "contact": {
+    "phone": "021-12345678",
+    "mobile": "09121234567",
+    "email": "info@example.com",
+    "address": "تهران، خیابان نمونه، پلاک ۱",
+    "address_en": "Tehran, Sample St., No. 1",
+    "instagram": "@example_store",
+    "telegram": "@example_store",
+    "whatsapp": "+989121234567"
+  },
+  "business_hours": {
+    "saturday": "9:00 - 21:00",
+    "sunday": "9:00 - 21:00",
+    "monday": "9:00 - 21:00",
+    "tuesday": "9:00 - 21:00",
+    "wednesday": "9:00 - 21:00",
+    "thursday": "9:00 - 21:00",
+    "friday": "تعطیل / Closed"
+  },
+  "categories": [
+    {
+      "id": "cat_1",
+      "name": "دسته‌بندی اول",
+      "name_en": "Category 1",
+      "description": "توضیحات دسته‌بندی اول"
+    },
+    {
+      "id": "cat_2",
+      "name": "دسته‌بندی دوم",
+      "name_en": "Category 2",
+      "description": "توضیحات دسته‌بندی دوم"
+    }
+  ],
+  "products": [
+    {
+      "id": "prod_1",
+      "name": "محصول نمونه ۱",
+      "name_en": "Sample Product 1",
+      "category_id": "cat_1",
+      "price": 1500000,
+      "currency": "IRR",
+      "stock": 25,
+      "description": "توضیحات کامل محصول نمونه ۱",
+      "description_en": "Full description of sample product 1",
+      "features": ["ویژگی ۱", "ویژگی ۲", "ویژگی ۳"],
+      "warranty_months": 12
+    },
+    {
+      "id": "prod_2",
+      "name": "محصول نمونه ۲",
+      "name_en": "Sample Product 2",
+      "category_id": "cat_2",
+      "price": 850000,
+      "currency": "IRR",
+      "stock": 10,
+      "description": "توضیحات کامل محصول نمونه ۲",
+      "description_en": "Full description of sample product 2",
+      "features": ["ویژگی الف", "ویژگی ب"],
+      "warranty_months": 6
+    }
+  ],
+  "shipping": {
+    "methods": [
+      {
+        "name": "پست پیشتاز",
+        "name_en": "Priority Post",
+        "price": 50000,
+        "estimated_days": "2-4 روز کاری"
+      },
+      {
+        "name": "تیپاکس",
+        "name_en": "Tipax",
+        "price": 80000,
+        "estimated_days": "1-2 روز کاری"
+      },
+      {
+        "name": "پیک موتوری (فقط تهران)",
+        "name_en": "Motorcycle Courier (Tehran only)",
+        "price": 40000,
+        "estimated_days": "همان روز / Same day"
+      }
+    ],
+    "free_shipping_threshold": 5000000,
+    "notes": "برای خرید بالای ۵ میلیون تومان ارسال رایگان است."
+  },
+  "payment_methods": [
+    "پرداخت آنلاین با درگاه بانکی",
+    "کارت به کارت",
+    "پرداخت در محل (فقط تهران)"
+  ],
+  "policies": {
+    "return_policy": "بازگشت کالا تا ۷ روز پس از دریافت، در صورت سالم بودن بسته‌بندی امکان‌پذیر است.",
+    "return_policy_en": "Returns accepted within 7 days if packaging is intact.",
+    "warranty_policy": "تمامی محصولات دارای گارانتی اصالت و سلامت فیزیکی هستند.",
+    "warranty_policy_en": "All products come with authenticity and physical warranty.",
+    "privacy_policy": "اطلاعات مشتریان محرمانه بوده و در اختیار هیچ شخص ثالثی قرار نمی‌گیرد."
+  },
+  "faq": [
+    {
+      "question": "چگونه سفارش خود را پیگیری کنم؟",
+      "answer": "با استفاده از کد رهگیری که پس از ثبت سفارش دریافت می‌کنید، از طریق سایت یا تماس با پشتیبانی می‌توانید سفارش را پیگیری کنید."
+    },
+    {
+      "question": "آیا امکان تعویض کالا وجود دارد؟",
+      "answer": "بله، در صورت وجود مشکل فنی یا مغایرت با سفارش، تا ۷ روز امکان تعویض وجود دارد."
+    }
+  ],
+  "chatbot_settings": {
+    "bot_name": "دستیار فروشگاه",
+    "bot_name_en": "Store Assistant",
+    "welcome_message": "سلام! 👋 من دستیار هوشمند {store_name} هستم. چطور می‌تونم کمکتون کنم؟",
+    "welcome_message_en": "Hello! 👋 I'm the smart assistant of {store_name}. How can I help you?",
+    "off_topic_response": "متأسفانه من فقط به سوالات مرتبط با {store_name} پاسخ می‌دهم. لطفاً سوال خود را در مورد محصولات، خدمات، یا سیاست‌های فروشگاه بپرسید.",
+    "off_topic_response_en": "I can only answer questions related to {store_name}. Please ask about our products, services, or policies.",
+    "primary_color": "#0ea5e9",
+    "accent_color": "#0284c7"
+  }
+}

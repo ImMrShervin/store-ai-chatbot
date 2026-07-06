@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>{{ store.chatbot_settings.bot_name }} — {{ store.store.name }}</title>
+  <meta name="description" content="{{ store.store.description }}" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🤖%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  <style>
+    :root {
+      --primary: {{ store.chatbot_settings.primary_color or '#0ea5e9' }};
+      --accent:  {{ store.chatbot_settings.accent_color  or '#0284c7' }};
+    }
+  </style>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="chat-header">
+      <div class="header-left">
+        <div class="avatar">🤖</div>
+        <div>
+          <h1 class="bot-name">{{ store.chatbot_settings.bot_name }}</h1>
+          <p class="store-name">{{ store.store.name }} • <span class="online-dot"></span> آنلاین</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <button id="clearBtn" title="پاک کردن گفتگو" class="icon-btn" aria-label="Clear">🗑️</button>
+        <button id="themeBtn" title="تغییر تم" class="icon-btn" aria-label="Theme">🌓</button>
+      </div>
+    </header>
+
+    <main id="messages" class="messages" aria-live="polite"></main>
+
+    <div id="typing" class="typing hidden">
+      <span></span><span></span><span></span>
+    </div>
+
+    <form id="composer" class="composer" autocomplete="off">
+      <textarea
+        id="input"
+        rows="1"
+        placeholder="پیام خود را بنویسید... / Type your message..."
+        aria-label="Message input"
+        required
+      ></textarea>
+      <button id="sendBtn" type="submit" aria-label="Send">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+          <path d="M3.4 20.4l17.45-8.4a1 1 0 0 0 0-1.8L3.4 2.6a1 1 0 0 0-1.4 1.16L4 12l-2 8.24a1 1 0 0 0 1.4 1.16z"/>
+        </svg>
+      </button>
+    </form>
+
+    <footer class="footer">
+      دستیار هوشمند {{ store.store.name }} • فقط به سوالات مرتبط با فروشگاه پاسخ می‌دهد
+    </footer>
+  </div>
+
+  <script>
+    window.STORE_CONFIG = {
+      botName: {{ store.chatbot_settings.bot_name | tojson }},
+      storeName: {{ store.store.name | tojson }},
+    };
+  </script>
+  <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+</body>
+</html>
