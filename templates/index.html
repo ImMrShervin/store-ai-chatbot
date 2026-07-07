@@ -9,8 +9,16 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
   <style>
     :root {
-      --primary: {{ store.chatbot_settings.primary_color or '#0ea5e9' }};
-      --accent:  {{ store.chatbot_settings.accent_color  or '#0284c7' }};
+      --primary: {{ store.chatbot_settings.primary_color or '#4f46e5' }};
+      --primary-dark: {{ store.chatbot_settings.accent_color or '#4338ca' }};
+      --header-grad-1: {{ store.chatbot_settings.primary_color or '#4f46e5' }};
+      --header-grad-2: {{ store.chatbot_settings.accent_color or '#4338ca' }};
+    }
+    body.dark {
+      --primary: {{ store.chatbot_settings.primary_color or '#818cf8' }};
+      --primary-dark: {{ store.chatbot_settings.accent_color or '#6366f1' }};
+      --header-grad-1: {{ store.chatbot_settings.primary_color or '#6366f1' }};
+      --header-grad-2: {{ store.chatbot_settings.accent_color or '#4f46e5' }};
     }
   </style>
 </head>
@@ -25,29 +33,35 @@
         </div>
       </div>
       <div class="header-actions">
-        <button id="clearBtn" title="پاک کردن گفتگو" class="icon-btn" aria-label="Clear">🗑️</button>
-        <button id="themeBtn" title="تغییر تم" class="icon-btn" aria-label="Theme">🌓</button>
+        <button id="themeBtn" title="تغییر تم" class="icon-btn" aria-label="Theme">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button id="clearBtn" title="پاک کردن گفتگو" class="icon-btn" aria-label="Clear">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+        </button>
       </div>
     </header>
 
     <main id="messages" class="messages" aria-live="polite"></main>
 
     <div id="typing" class="typing hidden">
-      <span></span><span></span><span></span>
+      <div class="bubble">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
     </div>
 
     <form id="composer" class="composer" autocomplete="off">
       <textarea
         id="input"
         rows="1"
-        placeholder="پیام خود را بنویسید... / Type your message..."
+        placeholder="پیام بنویسید..."
         aria-label="Message input"
         required
       ></textarea>
       <button id="sendBtn" type="submit" aria-label="Send">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
-          <path d="M3.4 20.4l17.45-8.4a1 1 0 0 0 0-1.8L3.4 2.6a1 1 0 0 0-1.4 1.16L4 12l-2 8.24a1 1 0 0 0 1.4 1.16z"/>
-        </svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
       </button>
     </form>
 

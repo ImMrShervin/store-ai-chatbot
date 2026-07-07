@@ -85,8 +85,7 @@ User ──▶ Flask API ──▶ ChatService ──▶ PromptBuilder ──▶
 ### الف) کلون پروژه
 
 ```bash
-git clone <your-repo-url> store_chatbot
-cd store_chatbot
+git clone https://github.com/ImMrShervin/store-ai-chatbot
 ```
 
 یا اگر فایل‌ها را به‌صورت zip دارید، آن را اکسترکت کنید و وارد پوشه شوید.
@@ -574,7 +573,6 @@ store_chatbot/
 3. CORS را در `app/__init__.py` روی دامنه واقعی خود محدود کنید.
 4. Rate limiter در حال حاضر in-memory است — برای مقیاس بالا از Redis استفاده کنید.
 5. HTTPS با Let's Encrypt استفاده کنید.
-6. فایل `.env` را هرگز commit نکنید.
 
 ---
 

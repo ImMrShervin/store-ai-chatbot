@@ -50,7 +50,17 @@ const appendMessage = (role, content) => {
   const wrap = document.createElement('div');
   wrap.className = `msg ${role === 'user' ? 'user' : 'bot'}`;
   if (isLTR(content)) wrap.classList.add('ltr');
-  wrap.innerHTML = `${mdRender(content)}<span class="time">${time()}</span>`;
+  
+  const bubble = document.createElement('div');
+  bubble.className = 'bubble';
+  bubble.innerHTML = mdRender(content);
+  
+  const meta = document.createElement('div');
+  meta.className = 'meta';
+  meta.textContent = time();
+  
+  wrap.appendChild(bubble);
+  wrap.appendChild(meta);
   els.messages.appendChild(wrap);
   scrollBottom();
 };
