@@ -5,7 +5,7 @@
 > یک چت‌بات با **Python + Flask + Groq**، طراحی‌شده برای اینکه فقط و فقط به سوالات مرتبط با فروشگاه شما پاسخ دهد. با ویرایش یک فایل JSON تمام اطلاعات فروشگاه(محصولات، قیمت‌ها، سیاست‌ها، ساعات کاری، آدرس و…) را به چت‌بات معرفی می‌کند و چت‌بات به‌صورت خودکار در حوزه همان فروشگاه پاسخ می‌دهد
  
 <div align="center">
-
+ 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)
 ![Flask](https://img.shields.io/badge/Flask-3.0-000000?logo=flask&logoColor=white)
 ![Groq](https://img.shields.io/badge/Groq-LLM-F55036)
