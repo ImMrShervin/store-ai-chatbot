@@ -7,9 +7,7 @@ from pathlib import Path
 from typing import Optional
 
 
-
 logger = logging.getLogger(__name__)
-
 
 SCHEMA_SQL = """
 CREATE TABLE IF NOT EXISTS sessions (
